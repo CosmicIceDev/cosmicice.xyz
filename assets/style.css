@@ -1,9 +1,45 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-body {
-    scroll-padding-top: 100px;
+.page-enter-active,
+.page-leave-active {
+	transition: opacity 0.2s;
+}
+.page-enter,
+.page-leave-to {
+	opacity: 0;
+}
+
+.icecontainer {
+	height: 25em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	vertical-align: middle;
+}
+
+.icecontainer h1 {
+	font-size: 5em;
+}
+
+.icelink {
+	display: inline-block;
+	color: #282828;
+	text-decoration: none;
+}
+
+.icelink::after {
+		content: '';
+		display: block;
+		width: 0;
+		height: 2px;
+		background: #282828;
+		transition: width .3s;
+}
+
+.icelink:hover::after {
+		width: 100%;
 }
