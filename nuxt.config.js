@@ -48,11 +48,21 @@ export default {
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
-  content: {},
+  content: {
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   },
+
+  // Loader
+  loading: {
+    color: '#282828',
+    failedColor: '#cc0000',
+    height: '0.3em',
+    continuous: true
+  },
+
   // Server conf
   server: {
     host: '[::1]'

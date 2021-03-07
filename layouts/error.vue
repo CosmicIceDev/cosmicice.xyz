@@ -1,7 +1,10 @@
 <template>
   <div class="error">
       <h1 class="err" v-if="error.statusCode === 404">404 Page Not Found</h1>
-      <h1 class="err" v-else>An Error Occurred...</h1>
+      <div v-else>
+        <h1 class="err">An Error Occurred...</h1>
+        <pre>{{error}}</pre>
+      </div>
   </div>
 </template>
 
@@ -19,6 +22,6 @@ export default {
     }
 
     .err {
-        font-size: 5em;
+        font-size: 4em;
     }
 </style>
