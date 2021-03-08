@@ -4,9 +4,10 @@
 		<NuxtLink class="logo" to="/">
 		</NuxtLink>
 		<ul class="links">
-			<li><NuxtLink onclick="if (document.getElementById('nav-toggle').checked) document.getElementById('nav-toggle').checked = false;" class="icelink" to="/projects">Projects</NuxtLink></li>
-			<li><NuxtLink onclick="if (document.getElementById('nav-toggle').checked) document.getElementById('nav-toggle').checked = false;" class="icelink" to="/writings">Writings</NuxtLink></li>
-			<li><NuxtLink onclick="if (document.getElementById('nav-toggle').checked) document.getElementById('nav-toggle').checked = false;" class="icelink" to="/contact">Contact</NuxtLink></li>
+			<li><NuxtLink @click="closeNav" class="icelink" to="/projects">Projects</NuxtLink></li>
+			<li><NuxtLink @click="closeNav" class="icelink" to="/writings">Writings</NuxtLink></li>
+			<li><NuxtLink @click="closeNav" class="icelink" to="/contact">Contact</NuxtLink></li>
+			<!--<DarkMode />-->
 		</ul>
 		<label for="nav-toggle" class="icon-burger">
 			<div class="line"></div>
@@ -44,6 +45,9 @@ export default {
 			
 			this.scrolled = currentScrollPosition < this.lastScrollPosition
 			this.lastScrollPosition = currentScrollPosition
+		},
+		closeNav() {
+			if (document.getElementById('nav-toggle').checked) document.getElementById('nav-toggle').checked = false;
 		}
 	}
 }
@@ -53,6 +57,7 @@ export default {
 	nav {
 		@apply fixed left-0 right-0 top-0;
 		padding: 0 2%;
+		padding-top: 0.5em;
 		height: 100px;
 		background-color: #fff;
 		z-index: 10;
@@ -166,10 +171,8 @@ export default {
 
 	@media screen and (max-width: 450px) {
 		nav .logo {
-			background-image: url('~assets/images/cat.svg');
-			background-repeat: no-repeat;
-			height: 5em;
-			width: 5em;
+			width: 20em;
+			height: 6em;
 		}
 	}
 </style>

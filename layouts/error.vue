@@ -11,7 +11,13 @@
 <script>
 export default {
     props: ['error'],
-    layout: 'default'
+    layout: 'default',
+    mounted() {
+        this.$nextTick(() => {
+            this.$nuxt.$loading.start()
+            setTimeout(() => this.$nuxt.$loading.finish(), 1000)
+        })
+    }
 }
 </script>
 

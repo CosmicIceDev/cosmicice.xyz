@@ -61,6 +61,13 @@
 			const options = { year: 'numeric', month: 'long', day: 'numeric' }
 	      	return new Date(date).toLocaleDateString('en', options)
 		}
-	}
+	},
+
+	mounted() {
+        this.$nextTick(() => {
+            this.$nuxt.$loading.start()
+            setTimeout(() => this.$nuxt.$loading.finish(), 1000)
+        })
+    }
   }
 </script>
