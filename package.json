@@ -11,9 +11,12 @@
   "dependencies": {
     "@nuxt/content": "^1.11.1",
     "@nuxtjs/pwa": "^3.3.5",
+    "child_process": "^1.0.2",
     "core-js": "^3.8.3",
     "nuxt": "^2.14.12",
-    "tailwindcss-dark-mode": "^1.1.7"
+    "prism-themes": "^1.6.0",
+    "tailwindcss-dark-mode": "^1.1.7",
+    "vue-tippy": "^4.8.0"
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^2.0.4",

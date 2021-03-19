@@ -9,3 +9,7 @@ author:
 # I made a PowerShell script to steal memes
 
 yea i did lol
+
+```js
+return console.log('hi');
+```

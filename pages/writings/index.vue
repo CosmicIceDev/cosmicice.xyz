@@ -1,5 +1,5 @@
 <template>
-  <div class="writings">
+  <!--<div class="writings hidden">
 	<br>
     <h1 class="writings-header">Writings</h1>
     <br><br>
@@ -21,6 +21,13 @@
 			</div>
 		</NuxtLink>
 	</div>
+  </div>-->
+  <div class="flex justify-center flex-col m-auto">
+	  <h1 class="">Writings</h1>
+	  <hr class="w-4/5">
+	  <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5" v-for="article of articles" :key="article.slug">
+		  
+	  </div>
   </div>
 </template>
 
@@ -45,6 +52,10 @@
 
 <script>
   export default {
+	head: {
+		title: 'Writings | cosmicice'
+	},
+
     async asyncData({ $content, params }) {
       const articles = await $content('articles')
         .only(['title', 'description', 'img', 'slug', 'author', 'createdAt'])

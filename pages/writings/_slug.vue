@@ -1,15 +1,42 @@
 <template>
-  <article>
-    <nuxt-content :document="article" />
-  </article>
+	<div class="writing-container">
+		<nuxt-content class="writing" :document="article" />
+	</div>
 </template>
 
-<script>
-  export default {
-    async asyncData({ $content, params }) {
-      const article = await $content('articles', params.slug).fetch()
+<style>
+    .writing-container {
+        display: flex;
+        justify-content: center;
+		align-items: center;
+		width: 80vw;
+		margin: auto;
+		padding: 0.5em;
+	}
+	
+	.nuxt-content-container {
+		width: 100%;
+	}
 
-      return { article }
+    .nuxt-content pre {
+        border-radius: 0.3em;
     }
-  }
+</style>
+
+<script>
+	export default {
+		layout: 'default',
+		async asyncData({ $content, params, error }) {
+			const article = await $content('articles', params.slug).fetch()
+
+			if (!article) return error({ error: '404', message: 'Writing Not Found' })
+
+			return { article }
+		},
+		head() {
+			return {
+				title: `${this.article.title} | cosmicice`
+			}
+		}
+	}
 </script>
