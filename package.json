@@ -2,6 +2,7 @@
   "name": "cosmicice",
   "version": "1.0.0",
   "private": true,
+  "license": "SEE IN LICENSE.md",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
