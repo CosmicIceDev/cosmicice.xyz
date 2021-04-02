@@ -1,19 +1,20 @@
 <template>
-	<nav class="navbar" :class="{ 'shadow': !scrolled }">
+	<div class="pb-32">
+		<nav class="navbar" :class="{ 'shadow': !scrolled }">
 		<input id="nav-toggle" type="checkbox">
-		<div class="logo" style="float: left;" id="logo">
+		<div class="logo float-none sm:float-left" id="logo">
 			<NuxtLink to="/">
-				<img src="~/assets/images/cat.svg" class="select-none draggable" style="width: auto; height: 5em;">
+				<img src="~/assets/images/cat.svg" class="z-50 select-none draggable" style="width: auto; height: 5em;">
 			</NuxtLink>
-			<h1 class="draggable">c</h1>
-			<h1 class="draggable">o</h1>
-			<h1 class="draggable">s</h1>
-			<h1 class="draggable">m</h1>
-			<h1 class="draggable">i</h1>
-			<h1 class="draggable">c</h1>
-			<h1 class="draggable">i</h1>
-			<h1 class="draggable">c</h1>
-			<h1 class="draggable">e</h1>
+			<h1 class="draggable hidden sm:block">c</h1>
+			<h1 class="draggable hidden sm:block">o</h1>
+			<h1 class="draggable hidden sm:block">s</h1>
+			<h1 class="draggable hidden sm:block">m</h1>
+			<h1 class="draggable hidden sm:block">i</h1>
+			<h1 class="draggable hidden sm:block">c</h1>
+			<h1 class="draggable hidden sm:block">i</h1>
+			<h1 class="draggable hidden sm:block">c</h1>
+			<h1 class="draggable hidden sm:block">e</h1>
 		</div>
 		<ul class="links">
 			<li><NuxtLink onclick="closeNav()" class="icelink" to="/projects">Projects</NuxtLink></li>
@@ -27,6 +28,7 @@
 			<div class="line"></div>
 		</label>
 	</nav>
+	</div>
 </template>
 
 <script>
@@ -104,7 +106,7 @@ export default {
 	nav .logo {
 		@apply float-left flex items-center ;
 		color: #282828;
-		height: 6em;
+		height: 5.5em;
 		width: auto;
 		padding-left: 0.7em;
 	}

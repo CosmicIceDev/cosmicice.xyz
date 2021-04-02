@@ -8,12 +8,7 @@
 
 <script>
 	export default {
-		mounted() {
-			this.$nextTick(() => {
-				this.$nuxt.$loading.start()
-				setTimeout(() => this.$nuxt.$loading.finish(), 1000)
-			})
-		}
+		
 	}
 </script>
 
@@ -36,7 +31,7 @@
 	}
 
 	body {
-		padding-top: 8em;
+		background-color: #fff;
 	}
 
 	*,

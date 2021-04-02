@@ -11,6 +11,10 @@ html {
 
 body {
 	min-height: 100%;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	background-color: #fff;
+	transition: background-color 0.3s;
 }
 
 .page-enter-active,
@@ -51,4 +55,8 @@ body {
 
 .icelink:hover::after {
 		width: 100%;
+}
+
+.tippy-tooltip {
+	border-radius: 0;
 }

@@ -1,6 +1,6 @@
 <template>
-	<div class="writing-container">
-		<nuxt-content class="writing" :document="article" />
+	<div class="writing-container w-full sm:w-4/5">
+		<nuxt-content class="writing w-full" :document="article" />
 	</div>
 </template>
 
@@ -9,13 +9,8 @@
         display: flex;
         justify-content: center;
 		align-items: center;
-		width: 80vw;
 		margin: auto;
 		padding: 0.5em;
-	}
-	
-	.nuxt-content-container {
-		width: 100%;
 	}
 
     .nuxt-content pre {
