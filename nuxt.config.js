@@ -75,6 +75,6 @@ export default {
   },
 
   server: {
-    host: '[::]'
+    host: 'localhost'
   }
 }
